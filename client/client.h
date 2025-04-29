@@ -11,7 +11,7 @@
 #define SERVER_IP "127.0.0.1"
 #define PORT 1618
 #define BUFFER_SIZE 1024
-#define SERIAL_PORT "/dev/ttyACM1"  // À ajuster selon ton système
+#define SERIAL_PORT "/dev/ttyACM0"  // À ajuster selon ton système
 //#define SERIAL_PORT "../serveur/log.txt"  // Utiliser le bon port série
 
 // Structure pour stocker les données de température et d'humidité

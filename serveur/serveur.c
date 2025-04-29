@@ -81,7 +81,7 @@ int main() {
     // Fermer le fichier après avoir écrit les données
     fermer_fichier(fichier);
 
-    printf("Données enregistrées dans donnees.csv ✅\n");
+    printf("Données enregistrées dans donnees.tsv ✅\n");
 
     // Fermer les sockets
     close(clientSocket);

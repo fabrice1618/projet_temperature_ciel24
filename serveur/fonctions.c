@@ -61,7 +61,7 @@ void afficher_ip_client(struct sockaddr_in *clientAddr) {
 
 // Fonction pour initialiser le fichier CSV (ouvrir et ajouter l'en-tête)
 FILE* initialiser_fichier() {
-    FILE *fichier = fopen("donnees.csv", "a");
+    FILE *fichier = fopen("donnees.tsv", "a");
 
     if (!fichier) {
         perror("Erreur ouverture fichier CSV");
@@ -71,7 +71,7 @@ FILE* initialiser_fichier() {
     // Ajouter l'en-tête si le fichier est vide
     fseek(fichier, 0, SEEK_END);
     if (ftell(fichier) == 0) {
-        fprintf(fichier, "date,heure,température,humidité\n");
+        fprintf(fichier, "date\t heure\t température\t humidité\n");
     }
 
     return fichier;
@@ -102,7 +102,6 @@ void dechiffrer(char *buffer) {
     }
 }
 
-// Fonction pour obtenir l'heure et la date actuelles
 // Fonction pour obtenir l'heure et la date actuelles
 void date(char *date_str, char *heure_str) {
     int h, min, s, day, mois, an;
