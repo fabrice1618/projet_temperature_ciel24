@@ -1,2 +1,2 @@
 # travail-colab
-Antoine Axel et Yanis
+Antoine Axel Yanis et Lenny
