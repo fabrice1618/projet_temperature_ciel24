@@ -8,11 +8,6 @@
 #include "comm_serie.h"
 
 
-// configuration port série
-//#define BUFFER_SIZE_SERIE 20
-//#define PORT_SERIE_DEFAUT "/dev/ttyACM0"
-
-
 // Fonction pour initialiser la liaison série
 CommSerie open_commSerie(char *port_serie, int buffer_size) 
 {
