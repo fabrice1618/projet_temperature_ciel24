@@ -11,6 +11,7 @@ INCLUDES = src/common.h src/comm_serie.h config.h
 BIN_DIR = bin
 BIN_TEST_ERROR = $(BIN_DIR)/test_error
 BIN_TEST_SERIAL_OPEN = $(BIN_DIR)/test_serial_open
+BIN_TEST_DECODAGE = $(BIN_DIR)/test_decoder_trame_serie
 
 # Mode debug ?
 ifeq ($(DEBUG),1)
@@ -26,6 +27,9 @@ $(BIN_TEST_ERROR): tests/test_error.c $(SRC) $(INCLUDES)
 	$(CC) $(CFLAGS) -o $@ $< $(SRC)
 
 $(BIN_TEST_SERIAL_OPEN): tests/test_serial_open.c $(SRC) $(INCLUDES)
+	$(CC) $(CFLAGS) -o $@ $< $(SRC)
+
+$(BIN_TEST_DECODAGE): tests/test_decoder_trame_serie.c $(SRC) $(INCLUDES)
 	$(CC) $(CFLAGS) -o $@ $< $(SRC)
 
 clean:
